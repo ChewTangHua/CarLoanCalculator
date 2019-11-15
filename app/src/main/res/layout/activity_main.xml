@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/txtCarPrice"
+        style="@style/Box"
+        android:layout_width="86dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/txt_car_price"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/editTextDownPayment"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextCarPrice"
+        style="@style/Box"
+        android:layout_width="0dp"
+        android:layout_marginStart="8dp"
+        android:hint="@string/car_price"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txtCarPrice"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtDownPayment"
+        style="@style/Box"
+        android:layout_width="134dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="8dp"
+        android:text="@string/txt_down_payment"
+        android:textAlignment="gravity"
+        android:textSize="18sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/editTextDownPayment"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextDownPayment"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:hint="@string/down_payment"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txtDownPayment"
+        app:layout_constraintTop_toBottomOf="@+id/editTextCarPrice" />
+
+    <TextView
+        android:id="@+id/txtLoanPeriod"
+        style="@style/Box"
+        android:layout_width="108dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="8dp"
+        android:text="@string/txt_loan_period"
+        android:textSize="18sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/editTextLoanPeriod"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextLoanPeriod"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:hint="@string/loan_period"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txtLoanPeriod"
+        app:layout_constraintTop_toBottomOf="@+id/editTextDownPayment" />
+
+    <TextView
+        android:id="@+id/txtInterestRate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="@string/txt_interest_rate"
+        android:textSize="18sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/editTextInterestRate"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextInterestRate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:hint="@string/interest_rate"
+        android:inputType="number|numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txtInterestRate"
+        app:layout_constraintTop_toBottomOf="@+id/editTextLoanPeriod" />
+
+    <TextView
+        android:id="@+id/textViewLoan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/loan"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextInterestRate" />
+
+    <TextView
+        android:id="@+id/textViewInterest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/interest"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewLoan" />
+
+    <TextView
+        android:id="@+id/textViewMonthlyRepayment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/monthly_repayment"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewInterest" />
+
+    <Button
+        android:id="@+id/buttonCalculate"
+        android:layout_width="129dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@android:color/holo_green_light"
+        android:text="@string/calculate"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/buttonReset"
+        android:layout_width="107dp"
+        android:layout_height="49dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@android:color/holo_green_light"
+        android:text="@string/reset"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
